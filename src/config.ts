@@ -162,18 +162,14 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-<<<<<<< HEAD
-			title: "郑全のBLOG", // 主页横幅主标题
-=======
-			title: "わたしの部屋", // 主页横幅主标题
->>>>>>> 7072c86fa6fe257f85e102a7bd3ea1d0c53c2b44
+			title: "郑全'BLOG", // 主页横幅主标题
 
-			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
+			subtitle: [			
+				"虽然没有什么特别的事，但有你在就足够了",
+				"现在你依然是我的光",
+				"你啊，不知不觉就成为了我的每一天",
+				"和你说话时，每天都会变得有点快乐",
+				"今天是没什么特别的日子。但，只是稍微好一点的日子",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
@@ -416,11 +412,7 @@ export const licenseConfig: LicenseConfig = {
 
 // Permalink 固定链接配置
 export const permalinkConfig: PermalinkConfig = {
-<<<<<<< HEAD
-	enable: true, // 是否启用全局 permalink 功能，关闭时使用默认的文件名作为链接
-=======
 	enable: false, // 是否启用全局 permalink 功能，关闭时使用默认的文件名作为链接
->>>>>>> 7072c86fa6fe257f85e102a7bd3ea1d0c53c2b44
 	/**
 	 * permalink 格式模板
 	 * 支持的占位符：
@@ -443,11 +435,7 @@ export const permalinkConfig: PermalinkConfig = {
 	 *
 	 * 注意：支持使用斜杠 "/" 构建嵌套路径。
 	 */
-<<<<<<< HEAD
 	format: "%category%/%post_id%.html", // 默认使用文件名
-=======
-	format: "%postname%", // 默认使用文件名
->>>>>>> 7072c86fa6fe257f85e102a7bd3ea1d0c53c2b44
 };
 
 export const expressiveCodeConfig: ExpressiveCodeConfig = {
@@ -487,12 +475,8 @@ export const shareConfig: ShareConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	title: "", // 公告标题，填空使用i18n字符串Key.announcement
-	content: "ブログへようこそ！これはサンプルの告知です", // 公告内容
-<<<<<<< HEAD
+	content: "欢迎访问我的博客", // 公告内容
 	closable: false, // 允许用户关闭公告
-=======
-	closable: true, // 允许用户关闭公告
->>>>>>> 7072c86fa6fe257f85e102a7bd3ea1d0c53c2b44
 	link: {
 		enable: true, // 启用链接
 		text: "Learn More", // 链接文本
