@@ -33,7 +33,7 @@ import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 
 // https://astro.build/config
 export default defineConfig({
-	site: siteConfig.siteURL,
+	site: "https://www.zhengquan.org",
 	base: "/",
 	trailingSlash: "always",
 
