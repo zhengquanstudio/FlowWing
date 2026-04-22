@@ -21,6 +21,7 @@ import { LinkPreset } from "./types/config";
 // 移除i18n导入以避免循环依赖
 
 // 定义站点语言
+<<<<<<< HEAD
 const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
 export const siteConfig: SiteConfig = {
@@ -28,6 +29,15 @@ export const siteConfig: SiteConfig = {
 	subtitle: "One demo website",
 	siteURL: "https://www.zhengquan.org/", // 请替换为你的站点URL，以斜杠结尾
 	siteStartDate: "2026-04-22", // 站点开始运行日期，用于站点统计组件计算运行天数
+=======
+const SITE_LANG = "en"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
+const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
+export const siteConfig: SiteConfig = {
+	title: "Mizuki",
+	subtitle: "One demo website",
+	siteURL: "https://mizuki.mysqil.com/", // 请替换为你的站点URL，以斜杠结尾
+	siteStartDate: "2025-01-01", // 站点开始运行日期，用于站点统计组件计算运行天数
+>>>>>>> 7072c86fa6fe257f85e102a7bd3ea1d0c53c2b44
 
 	timeZone: SITE_TIMEZONE,
 
@@ -162,7 +172,11 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
+<<<<<<< HEAD
 			title: "郑全のBLOG", // 主页横幅主标题
+=======
+			title: "わたしの部屋", // 主页横幅主标题
+>>>>>>> 7072c86fa6fe257f85e102a7bd3ea1d0c53c2b44
 
 			subtitle: [
 				"特別なことはないけど、君がいると十分です",
@@ -412,7 +426,11 @@ export const licenseConfig: LicenseConfig = {
 
 // Permalink 固定链接配置
 export const permalinkConfig: PermalinkConfig = {
+<<<<<<< HEAD
 	enable: true, // 是否启用全局 permalink 功能，关闭时使用默认的文件名作为链接
+=======
+	enable: false, // 是否启用全局 permalink 功能，关闭时使用默认的文件名作为链接
+>>>>>>> 7072c86fa6fe257f85e102a7bd3ea1d0c53c2b44
 	/**
 	 * permalink 格式模板
 	 * 支持的占位符：
@@ -435,7 +453,11 @@ export const permalinkConfig: PermalinkConfig = {
 	 *
 	 * 注意：支持使用斜杠 "/" 构建嵌套路径。
 	 */
+<<<<<<< HEAD
 	format: "%category%/%post_id%.html", // 默认使用文件名
+=======
+	format: "%postname%", // 默认使用文件名
+>>>>>>> 7072c86fa6fe257f85e102a7bd3ea1d0c53c2b44
 };
 
 export const expressiveCodeConfig: ExpressiveCodeConfig = {
@@ -476,7 +498,11 @@ export const shareConfig: ShareConfig = {
 export const announcementConfig: AnnouncementConfig = {
 	title: "", // 公告标题，填空使用i18n字符串Key.announcement
 	content: "ブログへようこそ！これはサンプルの告知です", // 公告内容
+<<<<<<< HEAD
 	closable: false, // 允许用户关闭公告
+=======
+	closable: true, // 允许用户关闭公告
+>>>>>>> 7072c86fa6fe257f85e102a7bd3ea1d0c53c2b44
 	link: {
 		enable: true, // 启用链接
 		text: "Learn More", // 链接文本
