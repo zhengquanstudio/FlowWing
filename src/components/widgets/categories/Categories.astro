@@ -2,41 +2,44 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
-// 1. 新增：英文分类 → 中文映射（核心修改）
+// 1. 英文分类 → 中文映射（保持和你文章一致）
 const cnCategoryMap = {
-  "tech": "技术",
   "game": "游戏",
+  "tech": "技术",
   "smart": "智能",
-  "Guides": "指南",
-  "Examples": "示例",
   "yulu": "语录",
+  "examples": "示例",
+  "guides": "指南",
   "uncategorized": "未分类"
 };
 
-// 2. 原有逻辑：获取文章并统计分类
+// 2. 获取所有文章，统计分类数量
 const posts = await getCollection('posts');
-const categoryMap = new Map<string, number>();
+const categoryCount = new Map<string, number>();
 
 posts.forEach((post: CollectionEntry<'posts'>) => {
-  const category = post.data.category || 'uncategorized';
-  categoryMap.set(category, (categoryMap.get(category) || 0) + 1);
+  const category = post.data.category || "uncategorized";
+  categoryCount.set(category, (categoryCount.get(category) || 0) + 1);
 });
 
-// 3. 新增：转换为带中文名称的分类列表
-const categories = Array.from(categoryMap.entries()).sort((a, b) => b[1] - a[1]).map(([enName, count]) => ({
-  enName,
-  cnName: cnCategoryMap[enName] || enName, // 优先显示中文，无映射则显示原名称
-  count
-}));
+// 3. 转换为「英文分类名+中文显示名+数量」的列表
+const categories = Array.from(categoryCount.entries())
+  .sort((a, b) => b[1] - a[1]) // 按文章数降序排列
+  .map(([enName, count]) => ({
+    enName,
+    cnName: cnCategoryMap[enName] || enName,
+    count
+  }));
 ---
 
-<!-- 4. 修改渲染部分：显示中文，链接保留英文 -->
+<!-- 4. 分类渲染：链接指向 /category/英文分类名/（适配trailingSlash: always） -->
 <div class="widget-category">
   <h3 class="widget-title">分类</h3>
   <ul class="category-list">
     {categories.map(({ enName, cnName, count }) => (
       <li key={enName} class="category-item">
-        <a href={`/category/${enName}`} class="category-link">
+        <!-- 核心：分类页链接格式 /category/分类名/（尾部必须加/） -->
+        <a href={`/category/${enName}/`} class="category-link">
           {cnName} <span class="category-count">({count})</span>
         </a>
       </li>
@@ -44,17 +47,20 @@ const categories = Array.from(categoryMap.entries()).sort((a, b) => b[1] - a[1])
   </ul>
 </div>
 
-<!-- 保留原有样式（无需修改） -->
+<!-- 5. 中文适配样式（解决排版错乱） -->
 <style>
   .widget-category {
     padding: 1rem;
     border-radius: 8px;
     background: var(--card-bg);
+    width: 100%;
+    box-sizing: border-box;
   }
   .widget-title {
     margin: 0 0 1rem 0;
     font-size: 1.1rem;
     font-weight: 600;
+    text-align: left;
   }
   .category-list {
     list-style: none;
@@ -63,6 +69,7 @@ const categories = Array.from(categoryMap.entries()).sort((a, b) => b[1] - a[1])
   }
   .category-item {
     margin: 0.5rem 0;
+    line-height: 1.5;
   }
   .category-link {
     display: flex;
@@ -70,7 +77,9 @@ const categories = Array.from(categoryMap.entries()).sort((a, b) => b[1] - a[1])
     align-items: center;
     color: var(--text-color);
     text-decoration: none;
-    transition: color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .category-link:hover {
     color: var(--primary-color);
@@ -78,5 +87,6 @@ const categories = Array.from(categoryMap.entries()).sort((a, b) => b[1] - a[1])
   .category-count {
     font-size: 0.85rem;
     color: var(--text-secondary);
+    margin-left: 0.5rem;
   }
 </style>
