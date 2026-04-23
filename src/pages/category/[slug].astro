@@ -1,0 +1,103 @@
+---
+// src/pages/category/[slug].astro
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro'; // 主题通用布局
+import PostCard from '@/components/PostCard.astro'; // 文章卡片组件
+import type { CollectionEntry } from 'astro:content';
+
+// 1. 获取所有分类名，生成静态路由（适配静态输出）
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  const categories = new Set(posts.map(post => post.data.category || 'uncategorized'));
+  
+  return Array.from(categories).map(slug => ({
+    params: { slug },
+  }));
+}
+
+// 2. 获取当前分类的slug（如 game/tech）
+const { slug } = Astro.params;
+// 3. 获取当前分类下的所有文章（按发布时间降序）
+const allPosts = await getCollection('posts');
+const categoryPosts = allPosts
+  .filter((post: CollectionEntry<'posts'>) => {
+    const postCategory = post.data.category || 'uncategorized';
+    return postCategory === slug;
+  })
+  .sort((a, b) => {
+    const dateA = new Date(a.data.published || a.data.date);
+    const dateB = new Date(b.data.published || b.data.date);
+    return dateB.getTime() - dateA.getTime(); // 最新文章在前
+  });
+
+// 4. 分类名中文映射（和Category.astro保持一致）
+const cnCategoryMap = {
+  "game": "游戏",
+  "tech": "技术",
+  "smart": "智能",
+  "yulu": "语录",
+  "examples": "示例",
+  "guides": "指南",
+  "uncategorized": "未分类"
+};
+const categoryName = cnCategoryMap[slug as string] || slug;
+---
+
+<!-- 5. 分类页渲染：显示「分类名 + 该分类下所有文章卡片」 -->
+<Layout title={`${categoryName} - 文章合集`} description={`${categoryName}分类下的所有文章`}>
+  <main class="category-page">
+    <!-- 分类标题 -->
+    <div class="category-header">
+      <h1>{categoryName} 分类</h1>
+      <p class="category-desc">共 {categoryPosts.length} 篇文章</p>
+    </div>
+
+    <!-- 分类下的文章列表（用PostCard组件，和首页一致） -->
+    <div class="post-list">
+      {categoryPosts.length > 0 ? (
+        categoryPosts.map(post => (
+          <PostCard 
+            key={post.id}
+            post={post}
+            permalinkConfig={import.meta.env.PERMALINK_CONFIG}
+          />
+        ))
+      ) : (
+        <div class="empty-post">该分类下暂无文章</div>
+      )}
+    </div>
+  </main>
+</Layout>
+
+<!-- 6. 分类页样式（适配主题风格） -->
+<style>
+  .category-page {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .category-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .category-header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0;
+  }
+  .category-desc {
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+  }
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .empty-post {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+  }
+</style>
