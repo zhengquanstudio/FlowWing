@@ -38,7 +38,7 @@ export default defineConfig({
 	site: siteConfig.siteURL,
 	base: "/",
 	trailingSlash: "never",
-
+    integrations: [mizuki()]
 	output: "static",
 
 	integrations: [
