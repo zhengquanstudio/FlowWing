@@ -37,7 +37,7 @@ export default defineConfig({
 	base: "/",
 	trailingSlash: "always",
     build: {
-      format: 'file'
+      format: 'directory'
      },
     output: "static",
 	integrations: [
