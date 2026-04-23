@@ -1,5 +1,5 @@
 ---
-title: Simple Guides for Mizuki
+title: 第五篇文章
 published: 2024-04-01
 description: "How to use this blog template."
 image: "./cover.webp"
@@ -8,52 +8,22 @@ category: Guides
 draft: false
 ---
 
+51、很久以前，我们无数次的擦肩而过，从今以后，我再不会错过与你牵手的机会，因为爱你，所以愿意，愿意去用心，愿意去珍惜，由你存在我的生命里。爱上你，是我今生的美。
 
+52、看着过往的美丽，在岁月摧残中，慢慢消逝，心底，只剩下空荡荡的失落。
 
-This blog template is built with [Astro](https://astro.build/). For the things that are not mentioned in this guide, you may find the answers in the [Astro Docs](https://docs.astro.build/).
+53、有时候，等一个人，等得太久了，会忘记他的模样，甚至名姓。有时候，等一朵莲开，等得太久，会让分明的四季，变得模糊不清。可是莲荷，在每年夏季终究要应约而来，但有些人，任你耗费一生的时光，也等不到。
 
-## Front-matter of Posts
+54、总有一天你会遇上那么一个人，他让你的欢笑和泪水都有意义，他善待你，把你当成生命中最重要的那个。
 
-```yaml
----
-title: My First Blog Post
-published: 2023-09-09
-description: This is the first post of my new Astro blog.
-image: ./cover.jpg
-tags: [Foo, Bar]
-category: Front-end
-draft: false
----
-```
+55、你要学会权衡利弊，学会放弃一些什么，然后才可能得到些什么。
 
+56、最好的时光，是一个人坐在某处安安静静读书的时候。就像最美妙的孤独，是一个人坐在街边长凳不为任何人的等候。
 
+57、不想永远留住霎时的绝美，只要曾经拥有，也就足够了。让曾经拥有成为永恒的体味，让曾经拥有成为珍惜现在的镜子，让曾经拥有成为我们昂然自信的源泉。
 
+58、桥北雨余春水生，桥南日落暮山横。问君对酒胡不乐？听取菱歌烟外声。
 
-| Attribute     | Description                                                                                                                                                                                                 |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `title`       | The title of the post.                                                                                                                                                                                      |
-| `published`   | The date the post was published.                                                                                                                                                                            |
-| `pinned`      | Whether this post is pinned to the top of the post list.                                                                                                                                                   |
-| `priority`    | The priority of the pinned post. Smaller value means higher priority (0, 1, 2...).                                                                                                                          |
-| `description` | A short description of the post. Displayed on index page.                                                                                                                                                   |
-| `image`       | The cover image path of the post.<br/>1. Start with `http://` or `https://`: Use web image<br/>2. Start with `/`: For image in `public` dir<br/>3. With none of the prefixes: Relative to the markdown file |
-| `tags`        | The tags of the post.                                                                                                                                                                                       |
-| `category`    | The category of the post.                                                                                                                                                                                   |
-| `licenseName` | The license name for the post content.                                                                                                                                                                      |
-| `author`      | The author of the post.                                                                                                                                                                                     |
-| `sourceLink`  | The source link or reference for the post content.                                                                                                                                                          |
-| `draft`       | If this post is still a draft, which won't be displayed.                                                                                                                                                    |
+59、红尘有梦，岁月迷离，闲词愁赋难为情，吟断刹那芳华，只落得伤心别有怀抱，幽禁了衣襟沾染的情殇；红颜弹指老，散了芬芳，公子泪如血，痴了流年；胭脂沾染灰，葬了花魂，宝剑折卷刃，断了豪情；情有千千结，化为纸鹤，寄去谁的思念？恨有幽幽殇，化为青灯，彻悟谁的菩提。
 
-## Where to Place the Post Files
-
-
-
-Your post files should be placed in `src/content/posts/` directory. You can also create sub-directories to better organize your posts and assets.
-
-```
-src/content/posts/
-├── post-1.md
-└── post-2/
-    ├── cover.webp
-    └── index.md
-```
+60、坐在窗台上，看着远方，天色迷蒙，黑暗就要到来，刚刚心疼到无以复加，闭上眼睛，强迫自己睡去，嗓子干涩难受，心情失落到了极点。
