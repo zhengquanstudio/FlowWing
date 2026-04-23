@@ -32,21 +32,12 @@ import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkFixGithubAdmonitions } from "./src/plugins/remark-fix-github-admonitions.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 
-export default defineConfig({
-  site: siteConfig.siteURL,
-  server: {
-    port: 4321 // 保持你的端口配置
-  },
-  // 关键配置：关闭尾部斜杠
-  trailingSlash: "never", 
-  integrations: [mizuki()]
-});
 
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.siteURL,
 	base: "/",
-	trailingSlash: "always",
+	trailingSlash: "never",
 
 	output: "static",
 
