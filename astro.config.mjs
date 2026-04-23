@@ -6,12 +6,6 @@ import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import swup from "@swup/astro";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
-
-
-import mizuki from '@astrojs/mizuki'; // 如果mizuki是一个主题或适配器
-// 如果oddmisc是一个集成
-// import oddmisc from 'astro-oddmisc';
-
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
 import { oddmisc } from "oddmisc";
