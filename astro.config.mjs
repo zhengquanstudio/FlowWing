@@ -37,7 +37,7 @@ import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 export default defineConfig({
 	site: siteConfig.siteURL,
 	base: "/",
-	trailingSlash: "never",
+	trailingSlash: "always",
     integrations: [mizuki()]
 	output: "static",
 
