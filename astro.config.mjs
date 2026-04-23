@@ -34,10 +34,9 @@ import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.siteURL,
-	base: "",
+	base: "/",
 	trailingSlash: "always",
 	output: "static",
-
 	integrations: [
 		oddmisc({
 			umami: {
