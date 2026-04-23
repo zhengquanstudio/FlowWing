@@ -7,6 +7,9 @@ import globals from "globals";
 import svelteParser from "svelte-eslint-parser";
 import tseslint from "typescript-eslint";
 
+
+
+
 const browserGlobals = {
 	...globals.browser,
 	console: "readonly",
