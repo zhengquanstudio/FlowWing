@@ -17,7 +17,8 @@ import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
-
+import { defineConfig } from 'astro/config';
+import mizuki from './src/plugin/mizuki';
 import { siteConfig } from "./src/config.ts";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
 import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badge.ts";
@@ -30,6 +31,16 @@ import { remarkContent } from "./src/plugins/remark-content.mjs";
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkFixGithubAdmonitions } from "./src/plugins/remark-fix-github-admonitions.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
+
+export default defineConfig({
+  site: siteConfig.siteURL,
+  server: {
+    port: 4321 // 保持你的端口配置
+  },
+  // 关键配置：关闭尾部斜杠
+  trailingSlash: "never", 
+  integrations: [mizuki()]
+});
 
 // https://astro.build/config
 export default defineConfig({
