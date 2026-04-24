@@ -10,9 +10,9 @@
 
 	const { icon, class: className = "" }: Props = $props();
 
-	const [collection, name] = $derived(
-		icon.includes(":") ? icon.split(":") : ["mdi", icon],
-	);
+	const [collection, name] = icon.includes(":")
+		? icon.split(":")
+		: ["mdi", icon];
 
 	const iconSetMap: Record<string, string> = {
 		"material-symbols": "@iconify-json/material-symbols",
@@ -24,45 +24,35 @@
 		"simple-icons": "@iconify-json/simple-icons",
 	};
 
-	const packageName = $derived(iconSetMap[collection]);
-	let svgContent = $state("");
+	const packageName = iconSetMap[collection];
+	let svgContent = "";
 
-	$effect(() => {
-		const currentIcon = icon;
-		const currentPackageName = packageName;
-		const currentName = name;
-		const currentClassName = className;
-
-		if (!currentPackageName) {
+	async function loadIcon() {
+		if (!packageName) {
 			return;
 		}
 
-		async function loadIcon() {
-			try {
-				const iconsData = await import(
-					/* @vite-ignore */ `${currentPackageName}/icons.json`
-				);
-				const icons = iconsData.icons || {};
-				const iconData = icons[currentName];
+		try {
+			const iconsData = await import(
+				/* @vite-ignore */ `${packageName}/icons.json`
+			);
+			const icons = iconsData.icons || {};
+			const iconData = icons[name];
 
-				if (iconData) {
-					const viewBox = iconData.viewBox || "0 0 24 24";
-					const body = iconData.body;
+			if (iconData) {
+				const viewBox = iconData.viewBox || "0 0 24 24";
+				const body = iconData.body;
 
-					if (body) {
-						svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" class="${currentClassName}">${body}</svg>`;
-					}
+				if (body) {
+					svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" class="${className}">${body}</svg>`;
 				}
-			} catch (e) {
-				console.warn(
-					`Failed to load icon ${currentIcon} from ${currentPackageName}:`,
-					e,
-				);
 			}
+		} catch (e) {
+			console.warn(`Failed to load icon ${icon} from ${packageName}:`, e);
 		}
+	}
 
-		loadIcon();
-	});
+	loadIcon();
 </script>
 
 {#if svgContent}

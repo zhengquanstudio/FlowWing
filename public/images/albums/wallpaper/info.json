@@ -1,0 +1,10 @@
+{
+	"title": "wallpaper",
+	"hidden": false,
+	"description": "壁纸.",
+	"date": "2026-04-01",
+	"location": "wallpaper",
+	"tags": ["wallpaper"],
+	"layout": "masonry",
+	"columns": 3
+}

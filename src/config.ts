@@ -19,7 +19,6 @@
 import { LinkPreset } from "./types/config";
 
 // 移除i18n导入以避免循环依赖
-
 // 定义站点语言
 const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
@@ -57,9 +56,9 @@ export const siteConfig: SiteConfig = {
 		// 顶栏标题文本
 		text: "郑全散记のBLOG",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.webp
-		icon: "assets/home/home.webp",
+		icon: "/assets/home/home.webp",
 		// 网站Logo图片路径
-		logo: "assets/home/default-logo.webp",
+		logo: "/assets/home/default-logo.webp",
 	},
 
 	// 页面自动缩放配置
@@ -368,7 +367,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
+	avatar: "assets/images/avatar.png", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
 	name: "郑全散记のBLOG",
 	bio: "我哒哒的马蹄是个美丽的错误，我只是过客，不是归人。",
 	typewriter: {
@@ -498,7 +497,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 };
 
 export const footerConfig: FooterConfig = {
-	enable: true, // 是否启用Footer HTML注入功能
+	enable: false, // 是否启用Footer HTML注入功能
 	customHtml: "", // HTML格式的自定义页脚信息，例如备案号等，默认留空
 	// 也可以直接编辑 FooterConfig.html 文件来添加备案号等自定义内容
 	// 注意：若 customHtml 不为空，则使用 customHtml 中的内容；若 customHtml 留空，则使用 FooterConfig.html 文件中的内容

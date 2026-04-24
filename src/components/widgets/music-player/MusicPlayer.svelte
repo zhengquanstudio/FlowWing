@@ -132,15 +132,6 @@
 	}
 
 	function handleVolumeKeyDown(event: KeyboardEvent) {
-		const target = event.target as HTMLElement;
-		if (
-			target?.tagName === "INPUT" ||
-			target?.tagName === "TEXTAREA" ||
-			target?.contentEditable === "true"
-		) {
-			return;
-		}
-
 		if (event.key === "ArrowLeft" || event.key === "ArrowDown") {
 			event.preventDefault();
 			musicPlayerStore.setVolume(state.volume - 0.05);

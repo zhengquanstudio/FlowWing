@@ -1,6 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
-
 interface FilterTab {
 	value: string;
 	label: string;
@@ -34,7 +32,9 @@ const {
 				data-filter-value={tab.value}
 				data-filter-attr={dataAttr}
 			>
-				{tab.icon && <Icon name={tab.icon} class="text-base w-4 h-4" />}
+				{tab.icon && (
+					<iconify-icon icon={tab.icon} width="16" height="16" />
+				)}
 				<span>{tab.label}</span>
 				{tab.count !== undefined && (
 					<span class="filter-tabs-count">({tab.count})</span>

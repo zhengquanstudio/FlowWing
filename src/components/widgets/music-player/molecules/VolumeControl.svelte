@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { Snippet } from "svelte";
 	import type { Action } from "svelte/action";
 
 	import VolumeButton from "../atoms/VolumeButton.svelte";
@@ -14,7 +13,6 @@
 		onSliderPointerDown: (event: PointerEvent) => void;
 		onSliderKeyDown: (event: KeyboardEvent) => void;
 		ariaLabel: string;
-		children?: Snippet;
 	}
 
 	const {
@@ -26,7 +24,6 @@
 		onSliderPointerDown,
 		onSliderKeyDown,
 		ariaLabel,
-		children,
 	}: Props = $props();
 </script>
 
@@ -40,5 +37,5 @@
 		onkeydown={onSliderKeyDown}
 		{ariaLabel}
 	/>
-	{@render children?.()}
+	<slot />
 </div>

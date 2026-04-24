@@ -238,13 +238,15 @@
 
 <!-- search bar for desktop view (collapsed by default) -->
 <div class="hidden lg:block relative w-11 h-11 shrink-0">
-	<button
+	<div
 		id="search-bar"
-		class="flex transition-all items-center h-11 rounded-lg absolute right-0 top-0 shrink-0 border-0 bg-transparent cursor-pointer
+		class="flex transition-all items-center h-11 rounded-lg absolute right-0 top-0 shrink-0
             {isDesktopSearchExpanded
 			? 'bg-black/[0.04] hover:bg-black/[0.06] focus-within:bg-black/[0.06] dark:bg-white/5 dark:hover:bg-white/10 dark:focus-within:bg-white/10'
 			: 'btn-plain active:scale-90'}
             {isDesktopSearchExpanded ? 'w-48' : 'w-11'}"
+		role="button"
+		tabindex="0"
 		aria-label="Search"
 		onmouseenter={() => {
 			if (!isDesktopSearchExpanded) {
@@ -284,7 +286,7 @@
 				? 'w-36'
 				: 'w-0'} text-black/50 dark:text-white/50"
 		/>
-	</button>
+	</div>
 </div>
 
 <!-- toggle btn for phone/tablet view -->

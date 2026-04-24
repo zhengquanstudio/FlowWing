@@ -8,7 +8,6 @@
 import "@/styles/toc.css";
 
 import type { MarkdownHeading } from "astro";
-import { siteConfig } from "@/config";
 
 import I18nKey from "../../../i18n/i18nKey";
 import { i18n } from "../../../i18n/translation";
@@ -21,7 +20,6 @@ interface Props {
 }
 
 const { class: className, style } = Astro.props;
-const useJapaneseBadge = siteConfig.toc.useJapaneseBadge;
 ---
 
 <WidgetLayout
@@ -30,7 +28,7 @@ const useJapaneseBadge = siteConfig.toc.useJapaneseBadge;
 	class={"group " + (className || "")}
 	style={style}
 >
-	<div data-card-toc-root data-japanese-badge={String(useJapaneseBadge)}>
+	<div data-card-toc-root>
 		<div class="toc-scroll-container">
 			<div class="toc-content" data-card-toc-content></div>
 		</div>
@@ -80,12 +78,9 @@ const useJapaneseBadge = siteConfig.toc.useJapaneseBadge;
 				existingManager.cleanup();
 			}
 
-			const useJapaneseBadge = root.dataset.japaneseBadge === "true";
-
 			const manager = new TOCManager({
 				contentElement: tocContent,
 				maxLevel: 3,
-				useJapaneseBadge,
 				scrollOffset: 80,
 			});
 
