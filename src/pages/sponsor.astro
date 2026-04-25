@@ -1,0 +1,141 @@
+---
+import { sponsorConfig } from '../data/sponsorConfig';
+import MainGridLayout from '../layouts/MainGridLayout.astro';
+import Iconify from '../components/Iconify.astro';
+
+// 解构数据
+const { title, notice, methods, sponsors, count } = sponsorConfig;
+---
+
+<MainGridLayout title={title} description="赞助支持页面">
+  <!-- 1. 顶部导航与统计 -->
+  <div class="mb-8">
+    <div class="flex items-center justify-between rounded-2xl px-5 py-4 backdrop-blur-sm bg-white/60 dark:bg-slate-800/60 border border-white/20 shadow-sm">
+      <!-- 左侧：主页链接 -->
+      <a href="/" class="flex items-center gap-2 group">
+        <Iconify icon="mdi:home" class="text-gray-800 w-6 h-6" />
+        <span class="font-medium text-gray-700 group-hover:text-blue-600 transition-colors">返回首页</span>
+      </a>
+
+      <!-- 右侧：支付方式统计 (修复了这里) -->
+      <div class="flex items-center gap-2 px-4 py-2 bg-white/50 dark:bg-slate-900/50 rounded-full border border-white/20">
+        <span class="text-sm font-medium text-gray-600 dark:text-gray-300">支付方式</span>
+        <span class="px-2 py-0.5 text-xs font-bold bg-white dark:bg-slate-700 rounded-full text-gray-800 dark:text-gray-200 shadow-sm">
+          {count}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. 页面标题 -->
+  <div class="text-center mb-6">
+    <h1 class="text-3xl font-bold text-gray-800 dark:text-white mb-3">赞助支持</h1>
+    <p class="text-sm text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-900/30 inline-block px-4 py-1.5 rounded-full">
+      {notice}
+    </p>
+  </div>
+
+  <!-- 3. 支付方式网格 -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+    {methods.map((method) => (
+      <div class="group relative flex flex-col h-full bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-gray-100 dark:border-slate-700 overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
+        
+        <!-- ================= 支付宝/微信 样式 (带背景头图和二维码) ================= -->
+        {method.type === 'alipay' || method.type === 'wechat' ? (
+          <>
+            {/* 顶部彩色背景头图 */}
+            <div class={`h-24 w-full flex flex-col items-center justify-center text-white relative overflow-hidden ${
+              method.type === 'alipay' ? 'bg-blue-600' : 'bg-green-500'
+            }`}>
+              {/* 装饰性圆圈 */}
+              <div class="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/40 to-transparent"></div>
+              
+              <h3 class="text-2xl font-bold z-10 relative">{method.name}</h3>
+              <p class="text-xs opacity-90 z-10 relative mt-1">使用 {method.name} 扫码赞助</p>
+            </div>
+
+            {/* 中间二维码区域 (白色背景) */}
+            <div class="flex-1 flex flex-col items-center justify-center p-8 bg-gray-50 dark:bg-slate-900/50">
+              <div class="relative p-3 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700">
+                <img 
+                  src={method.qrcode} 
+                  alt={method.name} 
+                  class="w-40 h-40 object-contain rounded-lg"
+                />
+              </div>
+              <p class="mt-6 text-gray-500 dark:text-gray-400 text-sm font-medium flex items-center gap-2">
+                <Iconify icon="mdi:qrcode-scan" class="w-4 h-4" />
+                使用 {method.name} 扫码赞助
+              </p>
+            </div>
+          </>
+        ) : (
+          <!-- ================= 爱发电/Ko-fi 样式 (简约居中) ================= -->
+          <div class="flex-1 flex flex-col items-center justify-center p-8">
+            {/* Logo 图标 */}
+            <div class={`w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-sm ${
+              method.type === 'afdian' 
+                ? 'bg-purple-100 text-purple-600 dark:bg-purple-900/30' 
+                : 'bg-orange-100 text-orange-600 dark:bg-orange-900/30'
+            }`}>
+              <Iconify 
+                icon={method.type === 'afdian' ? 'mdi:lightning-bolt' : 'mdi:coffee'} 
+                class="w-8 h-8" 
+              />
+            </div>
+            <!-- 标题 -->
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-1">{method.name}</h3>
+            <!-- 描述 -->
+            <p class="text-sm text-gray-500 dark:text-gray-400 text-center mb-6">
+              {method.type === 'afdian' ? '通过 爱发电 进行赞助' : 'Buy me a coffee'}
+            </p>
+            <!-- 按钮 -->
+            <a
+              href={method.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`px-8 py-2.5 rounded-full text-white text-sm font-bold transition-all shadow-md hover:shadow-lg hover:scale-105 ${
+                method.type === 'afdian' 
+                  ? 'bg-purple-600 hover:bg-purple-700' 
+                  : 'bg-orange-500 hover:bg-orange-600'
+              }`}
+            >
+              前往赞助
+            </a>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+
+  <!-- 4. 赞助列表 -->
+  <!-- 3. 赞助列表 -->
+<div class="rounded-3xl bg-white dark:bg-slate-800 shadow-sm border border-gray-100 dark:border-slate-700 p-6 mb-8">
+  <div class="flex justify-between items-center mb-6">
+    <h3 class="text-xl font-bold text-gray-800 dark:text-white">赞助列表</h3>
+    <span class="text-sm text-gray-500 bg-gray-100 dark:bg-slate-700 dark:text-gray-300 px-3 py-1 rounded-full">
+      共 {sponsors?.length || 0} 位支持者
+    </span>
+  </div>
+
+  <div class="space-y-4">
+    {sponsors?.map((sponsor) => (
+      <div class="group flex items-center justify-between p-4 rounded-2xl bg-gray-50 dark:bg-slate-900/50 transition-all duration-300 hover:shadow-md hover:bg-white dark:hover:bg-slate-800 hover:-translate-y-1 border border-transparent hover:border-gray-100 dark:hover:border-slate-700">
+        <div class="flex items-center gap-4">
+          <!-- 头像 -->
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold shadow-sm">
+            {sponsor.name.charAt(0).toUpperCase()}
+          </div>
+          <!-- 信息 -->
+          <div>
+            <h4 class="font-bold text-gray-800 dark:text-gray-200">{sponsor.name}</h4>
+            <p class="text-xs text-gray-500 dark:text-gray-400">{sponsor.date}</p>
+          </div>
+        </div>
+        <!-- 金额 -->
+        <span class="font-bold text-gray-800 dark:text-white">¥{sponsor.amount}</span>
+      </div>
+    ))}
+  </div>
+</div>
+</MainGridLayout>

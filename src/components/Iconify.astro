@@ -1,0 +1,15 @@
+---
+// src/components/Iconify.astro
+const { icon, width = 24, height = 24, color = "currentColor", class: className } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={width}
+  height={height}
+  fill={color}
+  class={className}
+  viewBox="0 0 24 24"
+>
+  <path d={icon} />
+</svg>

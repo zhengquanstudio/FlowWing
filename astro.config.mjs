@@ -115,7 +115,12 @@ export default defineConfig({
 		svelte({
 			preprocess: vitePreprocess(),
 		}),
-		sitemap(),
+       sitemap({
+           // 可选配置，默认即可用
+            changefreq: 'weekly',
+            priority: 0.7,
+           lastmod: new Date(),
+        })
 	],
 	markdown: {
 		remarkPlugins: [
