@@ -1,0 +1,110 @@
+{
+	"mode": "external",
+	"hidden": false,
+	"title": "爱读的书",
+	"description": "读书日常 & 藏书记录",
+	"date": "2026-04-25",
+	"location": "书房",
+	"tags": ["书籍", "阅读", "日常"],
+	"layout": "masonry",
+	"columns": 3,
+	"cover": "https://img.zhengquan.org/images/2026/04/1777128011",
+	"photos": [
+		{
+			"id": "12",
+			"src": "https://img.zhengquan.org/images/2026/04/1777128010",
+			"alt": "一句顶一句",
+			"title": "一句顶一句",
+			"description": "一句顶一句",
+			"tags": ["书籍", "阅读", "日常"]
+		},
+		{
+			"id": "11",
+			"src": "https://img.zhengquan.org/images/2026/04/1777128009",
+			"alt": "县乡中国",
+			"title": "县乡中国",
+			"description": "县乡中国",
+			"tags": ["书籍", "阅读", "日常"]
+		},
+		{
+			"id": "10",
+			"src": "https://img.zhengquan.org/images/2026/04/1777128008",
+			"alt": "治大国如烹小鲜",
+			"title": "治大国如烹小鲜",
+			"description": "治大国如烹小鲜",
+			"tags": ["书籍", "阅读", "日常"]
+		},
+		{
+			"id": "9",
+			"src": "https://img.zhengquan.org/images/2026/04/1777128007",
+			"alt": "咸的玩笑",
+			"title": "咸的玩笑",
+			"description": "咸的玩笑",
+			"tags": ["书籍", "阅读", "日常"]
+		},
+		{
+			"id": "8",
+			"src": "https://img.zhengquan.org/images/2026/04/1777128006",
+			"alt": "百年孤独",
+			"title": "百年孤独",
+			"description": "百年孤独",
+			"tags": ["书籍", "阅读", "日常"]
+		},
+		{
+			"id": "7",
+			"src": "https://img.zhengquan.org/images/2026/04/1777128004",
+			"alt": "霍乱时期的爱情",
+			"title": "霍乱时期的爱情",
+			"description": "霍乱时期的爱情",
+			"tags": ["书籍", "阅读", "日常"]
+		},
+		{
+			"id": "6",
+			"src": "https://img.zhengquan.org/images/2026/04/1777128003",
+			"alt": "置身事内",
+			"title": "置身事内",
+			"description": "置身事内",
+			"tags": ["书籍", "阅读", "日常"]
+		},		
+		{
+			"id": "5",
+			"src": "https://img.zhengquan.org/images/2026/04/1777128002",
+			"alt": "不被大风吹倒",
+			"title": "不被大风吹倒",
+			"description": "不被大风吹倒",
+			"tags": ["书籍", "阅读", "日常"]
+		},	
+		{
+			"id": "4",
+			"src": "https://img.zhengquan.org/images/2026/04/1777128809",
+			"alt": "活着",
+			"title": "活着",
+			"description": "余华活着",
+			"tags": ["书籍", "阅读", "日常"]
+		},
+		{
+			"id": "3",
+			"src": "https://img.zhengquan.org/images/2026/04/1777128000",
+			"alt": "聊斋志异",
+			"title": "聊斋志异",
+			"description": "聊斋志异",
+			"tags": ["书籍", "阅读", "日常"]
+		},
+		{
+			"id": "2",
+			"src": "https://img.zhengquan.org/images/2026/04/1777127999",
+			"alt": "中国哲学史",
+			"title": "中国哲学史",
+			"description": "中国哲学史",
+			"tags": ["书籍", "阅读", "日常"]
+		},
+		{
+			"id": "1",
+			"src": "https://img.zhengquan.org/images/2026/04/1777127997",
+			"alt": "一个村庄里的中国",
+			"title": "一个村庄里的中国",
+			"description": "一个村庄里的中国",
+			"tags": ["书籍", "阅读", "日常"]
+		}		
+	]
+}

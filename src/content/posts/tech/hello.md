@@ -1,8 +1,8 @@
 ---
 title: "博客搭建完成"
-date: 2026-04-20T20:00:00
-published: 2026-04-20T20:00:00
-updated: 2026-04-24T21:13:00
+date: 2026-04-21T20:00:00
+published: 2026-04-21T20:00:00
+updated: 2026-04-21T21:13:00
 description: ""
 tags: ["技术", "生活", "随笔"]
 category: 技术

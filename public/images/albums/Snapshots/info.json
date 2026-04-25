@@ -1,0 +1,30 @@
+{
+	"mode": "external",
+	"hidden": false,
+	"title": "随拍",
+	"description": "生活随拍",
+	"date": "2026-04-25",
+	"location": "山东",
+	"tags": ["随拍", "街头", "夜景"],
+	"layout": "masonry",
+	"columns": 3,
+	"cover": "https://img.zhengquan.org/images/2026/04/1777126872",
+	"photos": [
+		{
+			"id": "2",
+			"src": "https://img.zhengquan.org/images/2026/04/1777126876",
+			"alt": "夜景",
+			"title": "解放路夜景随拍",
+			"description": "夜景",
+			"tags": ["夜景"]
+		},
+		{
+			"id": "1",
+			"src": "https://img.zhengquan.org/images/2026/04/1777126875",
+			"alt": "夜景",
+			"title": "解放路夜景随拍",
+			"description": "夜景",
+			"tags": ["夜景"]
+		}		
+	]
+}

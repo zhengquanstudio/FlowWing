@@ -1,11 +1,38 @@
 {
-	"title": "宠物",
+	"mode": "external",
 	"hidden": false,
-	"description": "宠物猫狗",
-	"date": "2026-04-25",
-	"location": "山东",
-	"tags": ["宠物"],
+	"title": "宠物",
+	"description": "我的猫猫",
+	"date": "2026-04-22",
+	"location": "我的猫",
+	"tags": ["猫咪", "宠物"],
 	"layout": "masonry",
-	"columns": 3
-	"cover": "https://img.zhengquan.org/images/2026/04/1777110022",
+	"columns": 3,
+	"cover": "https://img.zhengquan.org/images/2026/04/1777126536",
+	"photos": [
+		{
+			"id": "3",
+			"src": "https://img.zhengquan.org/images/2026/04/1777126038",
+			"alt": "猫猫",
+			"title": "我的小猫咪",
+			"description": "这是我的小猫咪",
+			"tags": ["猫咪", "宠物"]
+		},
+		{
+			"id": "2",
+			"src": "https://img.zhengquan.org/images/2026/04/1777126037",
+			"alt": "猫猫",
+			"title": "我的小猫咪",
+			"description": "这是我的小猫咪",
+			"tags": ["猫咪", "宠物"]
+		},
+		{
+			"id": "1",
+			"src": "https://img.zhengquan.org/images/2026/04/1777126035",
+			"alt": "猫猫",
+			"title": "我的小猫咪",
+			"description": "这是我的小猫咪",
+			"tags": ["猫咪", "宠物"]
+		}		
+	]
 }

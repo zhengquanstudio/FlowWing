@@ -340,11 +340,11 @@ export const navBarConfig: NavBarConfig = {
 					url: "/friends/",
 					icon: "material-symbols:group",
 				},
-								{
-					name: "赞助",
-					url: "/sponsor/",
-					icon: "material-symbols:group",
-				},
+				//{
+				//	name: "赞助",
+				//	url: "/sponsor/",
+				//	icon: "material-symbols:group",
+				//},
 			],
 		},
 		{
@@ -381,11 +381,11 @@ export const profileConfig: ProfileConfig = {
 		speed: 120, // 打字速度（毫秒）
 	},
 	links: [
-//		{
-//			name: "Bilibili",
-//			icon: "fa7-brands:bilibili",
-//			url: "https://space.bilibili.com/701864046",
-//		},
+		{
+			name: "Bilibili",
+			icon: "fa7-brands:bilibili",
+			url: "https://www.bilibili.com/",
+		},
 		{
 			name: "Gitee",
 			icon: "mdi:git",
@@ -394,7 +394,7 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
-			url: "https://github.com/zhengquanstudio/Mizuki",
+			url: "https://github.com/zhengquanstudio/flowwing",
 		},
 		{
 			name: "Codeberg",
@@ -503,8 +503,11 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 };
 
 export const footerConfig: FooterConfig = {
-	enable: false, // 是否启用Footer HTML注入功能
-	customHtml: "", // HTML格式的自定义页脚信息，例如备案号等，默认留空
+	enable: true, // 是否启用Footer HTML注入功能
+	customHtml: "", 
+    
+	
+	// HTML格式的自定义页脚信息，例如备案号等，默认留空
 	// 也可以直接编辑 FooterConfig.html 文件来添加备案号等自定义内容
 	// 注意：若 customHtml 不为空，则使用 customHtml 中的内容；若 customHtml 留空，则使用 FooterConfig.html 文件中的内容
 	// FooterConfig.html 可能会在未来的某个版本弃用
@@ -557,7 +560,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 响应式配置
 			responsive: {
 				// 折叠阈值：当分类数量超过5个时自动折叠
-				collapseThreshold: 5,
+				collapseThreshold: 8,
 			},
 		},
 		{
@@ -673,7 +676,7 @@ export const sakuraConfig: SakuraConfig = {
 
 // Pio 看板娘配置
 export const pioConfig: import("./types/config").PioConfig = {
-	enable: false, // 禁用看板娘以提升性能
+	enable: true, // 禁用看板娘以提升性能
 	models: ["/pio/models/pio/model.json"], // 默认模型路径
 	position: "left", // 模型位置
 	width: 280, // 默认宽度
@@ -681,7 +684,7 @@ export const pioConfig: import("./types/config").PioConfig = {
 	mode: "draggable", // 默认为可拖拽模式
 	hiddenOnMobile: true, // 默认在移动设备上隐藏
 	dialog: {
-		welcome: "Welcome to Mizuki Website!", // 欢迎词
+		welcome: "Welcome to zhengquan'bolg Website!", // 欢迎词
 		touch: [
 			"What are you doing?",
 			"Stop touching me!",
