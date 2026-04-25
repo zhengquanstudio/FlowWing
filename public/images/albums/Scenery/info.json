@@ -1,10 +1,10 @@
 {
-	"title": "Scenery",
+	"title": "风景",
 	"hidden": false,
 	"description": "风景照片.",
 	"date": "2026-04-20",
 	"location": "大山",
-	"tags": ["Scenery"],
+	"tags": ["风景"],
 	"layout": "masonry",
 	"columns": 3
 }

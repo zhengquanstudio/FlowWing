@@ -1,10 +1,71 @@
 {
-	"title": "wallpaper",
+	"mode": "external",
+	"title": "壁纸",
 	"hidden": false,
-	"description": "壁纸.",
+	"description": "几张壁纸",
 	"date": "2026-04-01",
-	"location": "wallpaper",
-	"tags": ["wallpaper"],
+	"location": "上海",
+    "tags": ["街头", "摄影", "城市"],
 	"layout": "masonry",
 	"columns": 3
+	"cover": "https://img.zhengquan.org/images/2026/04/1777110022",
+    "photos": [
+    {
+	  "id": "external-8",
+      "src": "https://img.zhengquan.org/images/2026/04/1777110024",
+      "alt": "壁纸",
+      "title": "人民有信仰，国家有力量，民族有希望",
+      "tags": ["壁纸" , "党旗"]
+    },
+    {
+	  "id": "external-7",
+      "src": "https://img.zhengquan.org/images/2026/04/1777110025",
+      "alt": "壁纸",
+      "title": "漫画女生",
+      "tags": ["漫画" , "长发" , "蓝天"]
+    }
+    {
+	  "id": "external-6",
+      "src": "https://img.zhengquan.org/images/2026/04/1777110026",
+      "alt": "写真",
+      "title": "写真",
+      "tags": ["写真" , "衬衫" , "美女"]
+    }
+    {
+	  "id": "external-5",
+      "src": "https://img.zhengquan.org/images/2026/04/1777110027",
+		"alt": "白发美女",
+		"title": "白发美女",
+		"tags": ["壁纸" , "白发" , "美女"]
+    }
+    {
+	  "id": "external-4",
+      "src": "https://img.zhengquan.org/images/2026/04/1777110029",
+      "alt": "长腿妹子壁纸",
+      "title": "蓝天下长腿妹子",
+      "tags": ["蓝天" , "长腿"]
+    }
+    {
+	  "id": "external-3",
+      "src": "https://img.zhengquan.org/images/2026/04/1777110030",
+      "alt": "漫画壁纸",
+      "title": "漫画美女壁纸",
+      "tags": ["厂房" , "壁纸"]
+    }
+    {
+	  "id": "external-2",
+      "src": "https://img.zhengquan.org/images/2026/04/1777110032",
+      "alt": "沙发写真",
+      "title": "沙发写真",
+      "tags": ["沙发" , "美女" , "写真"]
+    }
+    {
+	  "id": "external-1",
+      "src": "https://img.zhengquan.org/images/2026/04/1777110035",
+	  "alt": "侧脸写真",
+      "title": "测光下的写真",
+	  "description": "这是一张来自外链的美丽风景图片",
+      "tags": ["美女" , "写真" , "阳光"]
+    }
+  ]
 }

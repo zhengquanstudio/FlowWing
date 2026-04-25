@@ -17,7 +17,7 @@ export const devicesData: DeviceCategory = {
 	OnePlus: [
 		{
 			name: "OnePlus 13T",
-			image: "/images/device/oneplus13t.webp",
+			image: "https://img.zhengquan.org/images/2026/04/1777108768",
 			specs: "Gray / 16G + 1TB",
 			description:
 				"Flagship performance, Hasselblad imaging, 80W SuperVOOC.",
@@ -27,7 +27,7 @@ export const devicesData: DeviceCategory = {
 	Router: [
 		{
 			name: "GL-MT3000",
-			image: "/images/device/mt3000.webp",
+			image: "https://img.zhengquan.org/images/2026/04/1777108769",
 			specs: "1000Mbps / 2.5G",
 			description:
 				"Portable WiFi 6 router suitable for business trips and home use.",

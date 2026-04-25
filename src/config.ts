@@ -47,6 +47,7 @@ export const siteConfig: SiteConfig = {
 		timeline: true, // 时间线页面开关
 		albums: true, // 相册页面开关
 		devices: true, // 设备页面开关
+		sponsor: true, // 赞助页面开关
 	},
 
 	// 顶栏标题配置
@@ -56,9 +57,9 @@ export const siteConfig: SiteConfig = {
 		// 顶栏标题文本
 		text: "郑全散记のBLOG",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.webp
-		icon: "/assets/home/home.webp",
+		icon: "https://img.zhengquan.org/img/home/home.webp",
 		// 网站Logo图片路径
-		logo: "/assets/home/default-logo.webp",
+		logo: "https://img.zhengquan.org/img/home/default-logo.webp",
 	},
 
 	// 页面自动缩放配置
@@ -124,16 +125,16 @@ export const siteConfig: SiteConfig = {
 		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
 		src: {
 			desktop: [
-				"/assets/desktop-banner/1.webp",
-				"/assets/desktop-banner/2.webp",
-				"/assets/desktop-banner/3.webp",
-				"/assets/desktop-banner/4.webp",
+				"https://img.zhengquan.org/img/desktop-banner/1.webp",
+				"https://img.zhengquan.org/img/desktop-banner/2.webp",
+				"https://img.zhengquan.org/img/desktop-banner/3.webp",
+				"https://img.zhengquan.org/img/desktop-banner/4.webp",
 			], // 桌面横幅图片
 			mobile: [
-				"/assets/mobile-banner/1.webp",
-				"/assets/mobile-banner/2.webp",
-				"/assets/mobile-banner/3.webp",
-				"/assets/mobile-banner/4.webp",
+				"https://img.zhengquan.org/img/mobile-banner/1.webp",
+				"https://img.zhengquan.org/img/mobile-banner/2.webp",
+				"https://img.zhengquan.org/img/mobile-banner/3.webp",
+				"https://img.zhengquan.org/img/mobile-banner/4.webp",
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
@@ -202,11 +203,11 @@ export const siteConfig: SiteConfig = {
 	generateOgImages: false, // 启用生成OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
 	favicon: [
 		// 留空以使用默认 favicon
-		// {
-		//   src: '/favicon/icon.png',    // 图标文件路径
-		//   theme: 'light',              // 可选，指定主题 'light' | 'dark'
-		//   sizes: '32x32',              // 可选，图标大小
-		// }
+		 {
+		   src: 'https://img.zhengquan.org/img/favicon/favicon.ico',    // 图标文件路径
+		   theme: 'light',              // 可选，指定主题 'light' | 'dark'
+		   sizes: '32x32',              // 可选，图标大小
+		 }
 	],
 
 	// 字体配置
@@ -244,16 +245,16 @@ export const siteConfig: SiteConfig = {
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	src: {
 		desktop: [
-			"/assets/desktop-banner/1.webp",
-			"/assets/desktop-banner/2.webp",
-			"/assets/desktop-banner/3.webp",
-			"/assets/desktop-banner/4.webp",
+			"https://img.zhengquan.org/img/desktop-banner/1.webp",
+			"https://img.zhengquan.org/img/desktop-banner/2.webp",
+			"https://img.zhengquan.org/img/desktop-banner/3.webp",
+			"https://img.zhengquan.org/img/desktop-banner/4.webp",
 		], // 桌面横幅图片
 		mobile: [
-			"/assets/mobile-banner/1.webp",
-			"/assets/mobile-banner/2.webp",
-			"/assets/mobile-banner/3.webp",
-			"/assets/mobile-banner/4.webp",
+			"https://img.zhengquan.org/img/mobile-banner/1.webp",
+			"https://img.zhengquan.org/img/mobile-banner/2.webp",
+			"https://img.zhengquan.org/img/mobile-banner/3.webp",
+			"https://img.zhengquan.org/img/mobile-banner/4.webp",
 		], // 移动横幅图片
 	}, // 使用本地横幅图片
 	position: "center", // 壁纸位置，等同于 object-position
@@ -372,7 +373,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.png", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
+	avatar: "https://img.zhengquan.org/img/avatar.png", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
 	name: "郑全散记のBLOG",
 	bio: "我哒哒的马蹄是个美丽的错误，我只是过客，不是归人。",
 	typewriter: {

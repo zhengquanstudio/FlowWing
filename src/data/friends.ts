@@ -15,7 +15,7 @@ export const friendsData: FriendItem[] = [
 	{
 		id: 1,
 		title: "郑全散记のBlog",
-		imgurl: "https://www.zhengquan.org/assets/home/home.webp",
+		imgurl: "https://img.zhengquan.org/img/home/home.webp",
 		desc: "这是我的网站",
 		siteurl: "https://www.zhengquan.org/",
 		tags: ["Framework"],

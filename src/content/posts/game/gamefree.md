@@ -6,7 +6,7 @@ updated: 2026-04-24T21:13:00
 description: ""
 tags: ["喜加一", "游戏", "日常"]
 category: 游戏
-image: "/images/postimages/gamefree.png"
+image: "https://img.zhengquan.org/images/2026/04/1777104053"
 sticky: false
 ---
 
@@ -27,7 +27,7 @@ sticky: false
 
 所有游戏的详细领取地址和限时周期已整理在下方，立即下滑查看攻略！
 
-![毁灭之刃](/images/postimages/doomblade.jpg)
+![](https://img.zhengquan.org/images/2026/04/1777104120)
 
 ## 毁灭之刃
 
@@ -45,7 +45,7 @@ https://store.epicgames.com/zh-CN/p/doomblade-afdf9a
 
 ------
 
-![毁灭之刃](/images/postimages/oddsparks.jpg)
+![](https://img.zhengquan.org/images/2026/04/1777104050)
 
 ## 奇光火花：自动化冒险
 
@@ -65,7 +65,7 @@ https://store.epicgames.com/zh-CN/p/oddsparks-58440c
 
 
 
-![毁灭之刃](/images/postimages/firestone.jpg)
+![](https://img.zhengquan.org/images/2026/04/1777104139)
 
 ## 火焰宝石：在线挂机角色扮演游戏
 

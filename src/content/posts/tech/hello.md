@@ -6,7 +6,7 @@ updated: 2026-04-24T21:13:00
 description: ""
 tags: ["技术", "生活", "随笔"]
 category: 技术
-image: "/images/postimages/hello.png"
+image: "https://img.zhengquan.org/images/2026/04/1777103935"
 sticky: false
 ---
 
@@ -22,7 +22,7 @@ sticky: false
 
 
 
-![hello](/images/postimages/hello.png)
+![](https://img.zhengquan.org/images/2026/04/1777103935)
 
 
 
